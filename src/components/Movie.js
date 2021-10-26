@@ -12,6 +12,7 @@ function Movie({ title, year, summary, poster, genres}) {
                 state : {year, title, summary, poster, genres},
             }}
             >
+            
             <img src={poster} alt={title} title={title} />
             <div className="movie__data">
                 <h3 className="movie__title">{title}</h3>

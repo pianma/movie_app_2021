@@ -1,0 +1,17 @@
+.Detail_body {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.Detail_title {
+    color: white;
+    font-size: 50px;
+}
+
+.Detail_summary {
+    color: white;
+}
+
+.Detail_genres{
+    color: white;
+}

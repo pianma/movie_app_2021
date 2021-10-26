@@ -3,10 +3,14 @@ import axios  from "axios";
 import Movie from "../components/Movie";
 import './Home.css';
 
+
+
+
 class Home extends React.Component{
   state = {
     isLoading: true,
     movies: [],
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLqc2meVMwc1LgH_YtWmF0SSZ3F5AOmppMoQ&usqp=CAU',
   };
 
   getMovies = async () => {
@@ -23,7 +27,7 @@ class Home extends React.Component{
   }
 
   render(){
-    const {isLoading, movies} = this.state;
+    const {isLoading, movies,image} = this.state;
     return (
     <section className = "container">
     {isLoading ? (
@@ -31,6 +35,12 @@ class Home extends React.Component{
           <span className="loader__text">Loading....</span>
       </div>
     ) : (
+      <div className="backpicture">
+        <img src={image} alt="dd" />
+        <p className="award">Titane was selected as the French entry for the Best International Feature Film at the 94th Academy Awards</p>
+        <canvas id="noise" class="noise"></canvas>
+        <div class="vignette"></div>
+
       <div className="movies">
      {movies.map(movie => (
        <Movie
@@ -43,6 +53,7 @@ class Home extends React.Component{
           genres={movie.genres}
       />
      ))}
+     </div>
      </div>
      )}
    </section> 

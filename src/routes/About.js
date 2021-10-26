@@ -4,13 +4,17 @@ import './About.css';
 function About(props) {
     console.log(props);
     return (
+   
         <div className="about__container">
             <span>
-                "Freedom is the freedom to say that two plus two make four. If that is granted, all else follows."
+                "Liberty without learning is always in peril
+                learning without liberty is always in vain. "
             </span>
-            <span>-George Orwell, 1984</span>
+            <span>-John F. Kennedy</span>
         </div>
     )
 }
+
+
 
 export default About;

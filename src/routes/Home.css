@@ -13,13 +13,22 @@
     font-weight: 300;
 }
 
+.loader__text {
+    color: white;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .movies {
+    margin-top: 250px;
+    margin-left: 250px;
     display: grid;
     grid-template-columns: repeat(2, minmax(400px, 1fr));
     grid-gap: 100px;
     padding: 50px;
     width: 80%;
     padding-top: 70px;
+   
 }
 
 @media screen and (max-width: 1090px) {
@@ -29,3 +38,44 @@
     }
     
 }
+
+.backpicture {
+   margin-top: 150px;
+   text-align: center;
+   
+}
+
+
+.award {
+    padding: .3em 1em .25em;    
+    font-weight: 400;
+    font-size: 40px;
+    color: #a8711b;
+    font-family: 'Bellefair', serif;
+    position:relative;
+    line-height:1.3;
+}
+
+.noise {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    pointer-events: none;
+    opacity: .15;
+}
+
+.vignette{
+    position:absolute;
+    width:100%; height:4500px;
+    box-shadow:inset 0px 0px 150px 20px black;
+    mix-blend-mode: multiply;
+    -webkit-animation: vignette-anim 3s infinite; /* Safari 4+ */
+    -moz-animation:    vignette-anim 3s infinite; /* Fx 5+ */
+    -o-animation:      vignette-anim 3s infinite; /* Opera 12+ */
+    animation:         vignette-anim 3s infinite; /* IE 10+, Fx 29+ */
+  }
